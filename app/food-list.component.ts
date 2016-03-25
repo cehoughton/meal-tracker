@@ -1,8 +1,8 @@
 import { Component, EventEmitter } from 'angular2/core';
 import { FoodComponent } from './food.component';
 import { Food } from './food.model';
-import { NewFoodComponent } from './new-food.component';
 import { EditFoodDetailsComponent } from './edit-food-details.component';
+import { NewFoodComponent } from './new-food.component';
 import { LowPipe } from './low.pipe';
 
 @Component({
@@ -50,5 +50,4 @@ export class FoodListComponent {
     this.filterLow = filterOption;
     console.log(this.filterLow);
   }
-
 }

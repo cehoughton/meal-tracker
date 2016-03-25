@@ -12,7 +12,7 @@ import { Food } from './food.model';
       <p>Details</p>
       <input placeholder="Details" class="col-sm-8 input-lg" #newDetails>
       <hr>
-      <input type="number" placeholder="calories" class="col-sm-8 input-lg" #newCalories>
+      <input type="number" placeholder="Calories" class="col-sm-8 input-lg" #newCalories>
       <button (click)="addFood(newName, newDetails, newCalories)" class="btn-success btn-lg add-button">Add Food</button>
     </div>
 
@@ -27,8 +27,8 @@ export class NewFoodComponent {
     var values = [newFoodName.value, newDetails.value, newCalories.value];
     this.onSubmitNewFood.emit(values);
     console.log(values);
-    newDetails.value = null;
-    newFoodName.value = null;
-    newCalories.value = null;
+    newFoodName.value = "";
+    newDetails.value = "";
+    newCalories.value = "";
   }
 }
