@@ -13,7 +13,8 @@ import { Food } from './food.model';
 })
 export class FoodComponent {
   public food: Food;
-}
+
+
 
 countCalories() {
   if(this.food.calories < 300) {
@@ -22,4 +23,5 @@ countCalories() {
   } else {
     this.food.low = false;
   }
+}
 }

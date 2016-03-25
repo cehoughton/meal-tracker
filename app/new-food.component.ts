@@ -19,7 +19,11 @@ export class NewFoodComponent {
   constructor(){
     this.onSubmitNewFood = new EventEmitter();
   }
-  addFood(newFoodName: HTMLInputElement){
-    
+  addFood(newFoodName: HTMLInputElement, details: HTMLSelectElement){
+    var values = [newFoodName.value, details.value];
+    this.onSubmitNewFood.emit(values);
+    console.log(values);
+    details.value = null;
+    newFoodName.value = null;
   }
 }

@@ -1,3 +1,37 @@
 h1 {
   color: blue;
 }
+
+.selected {
+  color: #22bdf0;
+}
+
+.app-blue {
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  background: #00A0FF;
+  border: 3px solid black;
+  padding: 40px 80px; }
+
+.food-display {
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  background: green;
+  border: 3px solid black;
+  padding: 40px 80px; }
+
+.new-food-form {
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  background: orange;
+  border: 3px solid black;
+  padding: 40px 80px; }

@@ -8,18 +8,22 @@ import { Food } from './food.model';
   directives: [FoodlistComponent],
   template: `
     <div class="container">
-      <h1>Meal Tracker App!</h1>
-      <food-list
-        [foodList]="foods"
-        (onFoodSelect)="foodWasSelected($event)">
-      </food-list>
+      <div class="app-blue">
+        <h1>Meal Tracker App!</h1>
+        <food-list
+          [foodList]="foods"
+          (onFoodSelect)="foodWasSelected($event)">
+        </food-list>
+      </div>
     </div>
   `
 })
 export class AppComponent {
-  public food: Food;
+  public foods: Food[];
   constructor(){
-    this.food = [];
+    this.foods = [
+      new Food("Taco", "very good", 0),
+    ];
   }
 foodWasSelected(clickedFood: Food): void {
   console.log("parent", clickedFood);
