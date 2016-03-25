@@ -22,6 +22,8 @@ import { LowPipe } from './low.pipe';
     [class.selected]="currentFood === selectedFood"
     [food]="currentFood">
   </food-display>
+  <edit-food-details *ngIf="selectedFood" [food]="selectedFood">
+  </edit-food-details>
   <new-food (onSubmitNewFood)="createFood($event)"></new-food>
   `
 

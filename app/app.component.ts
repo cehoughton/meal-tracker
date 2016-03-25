@@ -22,7 +22,7 @@ export class AppComponent {
   public foods: Food[];
   constructor(){
     this.foods = [
-      new Food("Taco", "very good", 0),
+      
     ];
   }
 foodWasSelected(clickedFood: Food): void {
