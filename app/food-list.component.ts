@@ -2,6 +2,7 @@ import { Component, EventEmitter } from 'angular2/core';
 import { FoodComponent } from './food.component';
 import { Food } from './food.model';
 import { NewFoodComponent } from './new-food.component';
+import { EditFoodDetailsComponent } from './edit-food-details.component';
 import { LowPipe } from './low.pipe';
 
 @Component({
@@ -9,7 +10,7 @@ import { LowPipe } from './low.pipe';
   inputs: ['foodList'],
   outputs: ['onFoodSelect'],
   pipes: [LowPipe],
-  directives: [FoodComponent, NewFoodComponent],
+  directives: [FoodComponent, EditFoodDetailsComponent, NewFoodComponent],
   template: `
   <select (change)="onChange($event.target.value)" class="filter">
     <option value="all" selected="selected">Show all food</option>
@@ -17,7 +18,7 @@ import { LowPipe } from './low.pipe';
     <option value="low">Show food under 300 calories</option>
   </select>
   <food-display *ngFor="#currentFood of foodList | low:filterLow"
-    (click)="foodclicked(currentFood)"
+    (click)="foodClicked(currentFood)"
     [class.selected]="currentFood === selectedFood"
     [food]="currentFood">
   </food-display>
@@ -40,7 +41,7 @@ export class FoodListComponent {
   }
   createFood(newFoodInfo): void {
     this.foodList.push(
-      new Food(newFoodInfo[0], newFoodInfo[1], this.foodList.length)
+      new Food(newFoodInfo[0], newFoodInfo[1], newFoodInfo[2], this.foodList.length)
     );
   }
   onChange(filterOption) {
