@@ -60,3 +60,13 @@ h1 {
     margin-left: 10px;
     padding-top: 8px;
     padding-bottom: 8px; }
+
+  .OK {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+  }
+
+  .OK button {
+    width: 30%;
+  }

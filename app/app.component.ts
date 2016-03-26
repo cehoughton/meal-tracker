@@ -22,9 +22,7 @@ import { Food } from './food.model';
 export class AppComponent {
   public foods: Food[];
   constructor(){
-    this.foods = [
-        new Food("Pizza", "Two slices of pizza, one Hawaiian and the other plain cheese", 400, 0),
-    ];
+    this.foods = [new Food("Pizza", "Two slices of pizza, one Hawaiian and the other plain cheese", 400, 0),];
   }
 foodWasSelected(clickedFood: Food): void {
   console.log("parent", clickedFood);

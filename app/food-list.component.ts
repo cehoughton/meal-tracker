@@ -4,13 +4,14 @@ import { Food } from './food.model';
 import { EditFoodDetailsComponent } from './edit-food-details.component';
 import { NewFoodComponent } from './new-food.component';
 import { LowPipe } from './low.pipe';
+import { FoodSelectComponent } from './food-select.component';
 
 @Component({
   selector: 'food-list',
   inputs: ['foodList'],
   outputs: ['onFoodSelect'],
   pipes: [LowPipe],
-  directives: [FoodComponent, EditFoodDetailsComponent, NewFoodComponent],
+  directives: [FoodComponent, FoodSelectComponent, EditFoodDetailsComponent, NewFoodComponent],
   template: `
   <select (change)="onChange($event.target.value)" class="filter">
     <option value="all" selected="selected">Show all food</option>
@@ -22,8 +23,13 @@ import { LowPipe } from './low.pipe';
     [class.selected]="currentFood === selectedFood"
     [food]="currentFood">
   </food-display>
-  <edit-food-details *ngIf="selectedFood" [food]="selectedFood">
+  <food-select *ngIf="selectedFood" [food]="selectedFood" (onClick)="foodToEdit = selectedFood">
+  </food-select>
+  <edit-food-details *ngIf="foodToEdit" [food]="foodToEdit">
   </edit-food-details>
+  <div class="OK">
+  <button class="btn btn-success" *ngIf="foodToEdit" (click)="editToggle()">OK</button>
+  </div>
   <new-food (onSubmitNewFood)="createFood($event)"></new-food>
   `
 
