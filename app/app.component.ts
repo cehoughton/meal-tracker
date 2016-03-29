@@ -1,4 +1,4 @@
-///<reference path="../node_modules/angular2/typings/browser.d.ts"/>
+
 
 import { Component, EventEmitter } from 'angular2/core';
 import { FoodListComponent } from './food-list.component';
@@ -26,5 +26,5 @@ export class AppComponent {
   }
 foodWasSelected(clickedFood: Food): void {
   console.log("parent", clickedFood);
-}
+ }
 }

@@ -38,6 +38,7 @@ export class FoodListComponent {
   public foodList: Food[];
   public onFoodSelect: EventEmitter<Food>;
   public selectedFood: Food;
+  public foodToEdit: Food;  
   public filterLow: string = "all";
   constructor() {
     this.onFoodSelect = new EventEmitter();
@@ -55,5 +56,8 @@ export class FoodListComponent {
   onChange(filterOption) {
     this.filterLow = filterOption;
     console.log(this.filterLow);
+  }
+  editToggle() {
+    this.foodToEdit = null;
   }
 }

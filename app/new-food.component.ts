@@ -3,7 +3,7 @@ import { Food } from './food.model';
 
 @Component({
   selector: 'new-food',
-  outputs:Component['onSubmitNewFood'],
+  outputs:['onSubmitNewFood'],
   template: `
     <div class="new-food-form">
       <h3>Log Food:</h3>
@@ -19,7 +19,7 @@ import { Food } from './food.model';
   `
 })
 export class NewFoodComponent {
-  public onSubmitNewFood: EventEmitter<String>;
+  public onSubmitNewFood: EventEmitter<String[]>;
   constructor(){
     this.onSubmitNewFood = new EventEmitter();
   }
