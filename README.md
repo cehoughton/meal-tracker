@@ -22,8 +22,7 @@ _This app allows the user to input their meals, then displays a list of things t
 
 ## Known Bugs
 
-_food list does not show in browser but shows in console_
-_styles do not show initially_
+_No known bugs_
 
 
 ## Technologies Used
