@@ -10,11 +10,11 @@ export class LowPipe implements PipeTransform {
     var calorieCount = args[0];
     if(calorieCount === "low") {
       return input.filter(function(food) {
-        return food.low;
+        return food.calories <= 300;
       });
     } else if (calorieCount === "notLow") {
       return input.filter((food) => {
-        return !food.low;
+        return food.calories > 300;
       });
     } else {
       return input;
