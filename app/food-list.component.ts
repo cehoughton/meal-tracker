@@ -38,7 +38,7 @@ export class FoodListComponent {
   public foodList: Food[];
   public onFoodSelect: EventEmitter<Food>;
   public selectedFood: Food;
-  public foodToEdit: Food;  
+  public foodToEdit: Food;
   public filterLow: string = "all";
   constructor() {
     this.onFoodSelect = new EventEmitter();
