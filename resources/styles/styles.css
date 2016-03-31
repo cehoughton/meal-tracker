@@ -36,17 +36,17 @@ h1 {
   border: 3px solid black;
   padding: 40px 40px; }
 
-  .edit-food-form {
+  /*.edit-food-form {
   overflow: auto;
   box-sizing: border-box;
   margin-top: 20px;
   margin-bottom: 60px;
-  /*display: flex;*/
+  display: flex;
   flex-direction: column;
   background: yellow;
-  /*border: 3px solid black;*/
-  /*padding: 40px 80px; */
-}
+  border: 3px solid black;
+  padding: 40px 80px;
+}*/
 
   .food-display button {
     width: 30%;
@@ -66,11 +66,11 @@ h1 {
    }
 
   .OK {
-    padding: 20px 0;
-    background-color: yellow;
-    display: flex;
+    /*padding: 20px 0;*/
+    /*background-color: yellow;*/
+    /*display: flex;
     flex-flow: column wrap;
-    align-items: flex-start;
+    align-items: flex-start;*/
   }
 
   .OK button {

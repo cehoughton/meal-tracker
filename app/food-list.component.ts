@@ -28,7 +28,7 @@ import { FoodSelectComponent } from './food-select.component';
   <edit-food-details *ngIf="foodToEdit" [food]="foodToEdit">
   </edit-food-details>
   <div class="OK">
-  <button class="btn btn-success" *ngIf="foodToEdit" (click)="editToggle()">OK</button>
+<button class="btn btn-success" *ngIf="foodToEdit" (click)="editToggle()">OK</button>
   </div>
   <new-food (onSubmitNewFood)="createFood($event)"></new-food>
   `
